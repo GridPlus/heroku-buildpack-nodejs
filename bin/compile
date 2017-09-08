@@ -34,7 +34,7 @@ if [ "$ssh_key" != "" ]; then
 
   IFS=',' read -ra HOST <<< "$ssh_hosts"
   for i in "${HOST[@]}"; do
-    ssh -oStrictHostKeyChecking=no -T $i 2>&1 | indent
+    ssh -oStrictHostKeyChecking=no -T $i 2>&1
   done
 
   exit 0
